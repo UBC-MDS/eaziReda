@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-lmost every data analysis project involves the process of doing some exploratory data analysis(EDA) and data preprocessing. Usually they serve as a very crucial and inevitable step in a data analysis workflow. There are some very common tasks in EDA, which can include:
+Almost every data analysis project involves the process of doing some exploratory data analysis(EDA) and data preprocessing. Usually they serve as a very crucial and inevitable step in a data analysis workflow. There are some very common tasks in EDA, which can include:
 
 - checking missing values
 - detecting outliers 
@@ -29,13 +29,7 @@ Typically these steps are followed by some preprocesing like imputation and deal
 
 ## Installation
 
-You can install the released version of eaziReda from [CRAN](https://CRAN.R-project.org) with:
-
-``` r
-install.packages("eaziReda")
-```
-
-And the development version from [GitHub](https://github.com/) with:
+You can install the development version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")

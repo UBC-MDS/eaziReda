@@ -6,7 +6,7 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
-lmost every data analysis project involves the process of doing some
+Almost every data analysis project involves the process of doing some
 exploratory data analysis(EDA) and data preprocessing. Usually they
 serve as a very crucial and inevitable step in a data analysis workflow.
 There are some very common tasks in EDA, which can include:
@@ -26,12 +26,8 @@ using just four lines of code!
 
 ## Installation
 
-You can install the released version of eaziReda from
-[CRAN](https://CRAN.R-project.org) with:
-
-    install.packages("eaziReda")
-
-And the development version from [GitHub](https://github.com/) with:
+You can install the development version from
+[GitHub](https://github.com/) with:
 
     # install.packages("devtools")
     devtools::install_github("dbandrews/eaziReda")
