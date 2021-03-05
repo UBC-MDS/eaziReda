@@ -46,9 +46,9 @@ You can install the development version from
 3.  `corr_plot`: This function will take in a dataframe and a list of
     feature names to generate a correlation plot for the given list of
     features.
-4.  `categorical_histograms`: This function will take in a dataframe and
-    a list of feature names to generates histograms for numeric features
-    and bar plots for categorical features
+4.  `histograms`: This function will take in a dataframe and a list of
+    feature names to generates histograms for numeric features and bar
+    plots for categorical features
 
 ## Dependencies
 
