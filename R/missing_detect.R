@@ -1,4 +1,4 @@
-#' Checking missing values in dataframe
+#' Check missing values in dataframe
 #'
 #' @description Return the number/percentage of missing values for each column in the dataframe
 #'
@@ -9,7 +9,7 @@
 #' @export
 #'
 #' @examples
-#' df <- tibble(a =c(1,NA,2, 3), b= c('x', 'y', NA, 'y'))
+#' df <- tibble(a =c(1, NA, 2, 3), b= c('x', 'y', NA, 'y'))
 #' missing_detect(df)
 missing_detect <- function(data){
 
