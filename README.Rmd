@@ -44,7 +44,18 @@ devtools::install_github("dbandrews/eaziReda")
 4.  `histograms`: This function will take in a dataframe and a list of feature names to generates histograms for numeric features and bar plots for categorical features
 5.  `remove_outliers`: This function will remove the outliers from the given vector based on a second vector that has the outliers' indices marked
 
-## Dependencies
+## Similar Work
+
+While there aren't a ton of packages in R that do _only_ EDA, quite a few of them include it as a secondary functionality. Here are a few packages that we found that do something similar:
+
+- [SmartEDA](https://cran.r-project.org/web/packages/SmartEDA/vignettes/SmartEDA.html)
+  - SmartEDA includes multiple custom functions to perform initial exploratory analysis on any input data describing the structure and the relationships present in the data.
+
+- [dlookr](https://cran.r-project.org/web/packages/dlookr/index.html)
+  - A collection of tools that support data diagnosis, exploration, and transformation. Data diagnostics provides information and visualization of missing values and outliers and unique and negative values to help you understand the distribution and quality of your data. 
+  
+- [DataExplorer](https://www.rdocumentation.org/packages/DataExplorer/versions/0.8.1)
+  - Automated data exploration process for analytic tasks and predictive modeling, so that users could focus on understanding data and extracting insights.
 
 ## Code of Conduct
 
