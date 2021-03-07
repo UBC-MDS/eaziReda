@@ -8,7 +8,7 @@
 #' @export
 #'
 #' @examples
-#' daf <- tibble(a =c(1,NA,2, 3), b= c('x', 'y', NA, 'y'))
+#' daf <- tibble(a =c(1, NA, 2, 3), b= c('x', 'y', NA, 'y'))
 #' missing_impute(daf)
 missing_impute <- function(data, method_num="mean", method_non_num="most_frequent"){
 
