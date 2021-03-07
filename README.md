@@ -59,6 +59,8 @@ You can install the development version from
 Please note that the eaziReda project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html).
 By contributing to this project, you agree to abide by its terms.
 
+## Features
+
 1.  `missing_detect`: This function will take in a dataframe and generate a table listing the number of missing values and the percentage of missing values for each column. 
 2.  `missing_impute`: This function will take in a dataframe and genereate a imputated dataframe based on some simple imputation method. The imputation methods can also be customized by the user.
 3.  `outliers_detect` : This function will take in a pandas series and will return a boolean numpy array containing all the indices of outliers as `True`, given by certain method that the users can customize.
