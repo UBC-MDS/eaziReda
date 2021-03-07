@@ -11,7 +11,8 @@
 #' @export
 #'
 #' @examples
-#' categorical_histograms(mtcars, features=c("mpg","cyl"), plot_width=600, plot_height=400)
+#' categorical_histograms(mtcars, features=c("mpg","cyl"),
+#' plot_width=600, plot_height=400)
 categorical_histograms <- function(data, features, plot_width=600, plot_height=400){
 
 }
