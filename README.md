@@ -35,6 +35,32 @@ You can install the development version from
 
 ## Features
 
+<<<<<<< HEAD
+1.  `missing_impute`: This function will take in a dataframe and
+    generate a table listing the number of missing values and the
+    percentage of missing values for each column. It also gives the user
+    an option of doing some simple imputations on the entire dataframe
+    in place. The imputation methods can also be customized by the user.
+2.  `outliers_detect` : This function will take in a pandas series and
+    will return a series containing all outliers given by certain method
+    that the users can customize. It also gives the user an option to
+    remove all the outliers in place.
+3.  `corr_plot`: This function will take in a dataframe and a list of
+    feature names to generate a correlation plot for the given list of
+    features.
+4.  `histograms`: This function will take in a dataframe and a list of
+    feature names to generates histograms for numeric features and bar
+    plots for categorical features
+
+## Dependencies
+
+## Code of Conduct
+
+Please note that the eaziReda project is released with a [Contributor
+Code of
+Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html).
+By contributing to this project, you agree to abide by its terms.
+=======
 1.  `missing_detect`: This function will take in a dataframe and generate a table listing the number of missing values and the percentage of missing values for each column. 
 2.  `missing_impute`: This function will take in a dataframe and genereate a imputated dataframe based on some simple imputation method. The imputation methods can also be customized by the user.
 3.  `outliers_detect` : This function will take in a pandas series and will return a boolean numpy array containing all the indices of outliers as `True`, given by certain method that the users can customize.
@@ -54,3 +80,4 @@ We welcome and recognize all contributions.
 |   Dustin Andrews|  @dbandrews| 
 |  Arash Shamseddini | @arashshams| 
 |  Yuyan Guo | @yuyanguo| 
+>>>>>>> master

@@ -41,9 +41,13 @@ devtools::install_github("dbandrews/eaziReda")
 1.  `missing_impute`: This function will take in a dataframe and generate a table listing the number of missing values and the percentage of missing values for each column. It also gives the user an option of doing some simple imputations on the entire dataframe in place. The imputation methods can also be customized by the user.
 2.  `outliers_detect` : This function will take in a vector and will return a boolean vector with outliers marked given by certain method that the users can customize. It also gives the user an option to remove all the outliers in place.
 3.  `corr_plot`: This function will take in a dataframe and a list of feature names to generate a correlation plot for the given list of features.
-4.  `categorical_histograms`: This function will take in a dataframe and a list of feature names to generates histograms for numeric features and bar plots for categorical features
+4.  `histograms`: This function will take in a dataframe and a list of feature names to generates histograms for numeric features and bar plots for categorical features
 5.  `remove_outliers`: This function will remove the outliers from the given vector based on a second vector that has the outliers' indices marked
 
 ## Dependencies
+
+## Code of Conduct
+
+Please note that the eaziReda project is released with a [Contributor Code of Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
 
 
