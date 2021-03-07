@@ -83,3 +83,14 @@ Please note that the eaziReda project is released with a [Contributor
 Code of
 Conduct](https://contributor-covenant.org/version/2/0/CODE_OF_CONDUCT.html).
 By contributing to this project, you agree to abide by its terms.
+
+## Contributors
+
+We welcome and recognize all contributions.
+
+| Core contributor          | Github.com username |
+| ------------------------- | ------------------- |
+| Vignesh Lakshmi Rajakumar | @vigneshrajakumar   |
+| Dustin Andrews            | @dbandrews          |
+| Arash Shamseddini         | @arashshams         |
+| Yuyan Guo                 | @yuyanguo           |
