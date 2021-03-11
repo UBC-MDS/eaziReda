@@ -11,11 +11,11 @@
 #'
 #' @examples
 #' histograms(mtcars, features=c("mpg","cyl"))
+#' @importFrom rlang .data
 histograms <-
   function(data,
            features,
            num_cols = 2) {
-
     if (!is.data.frame(data)) {
       stop("data must be a data.frame like object")
     }
@@ -27,11 +27,11 @@ histograms <-
     }
 
     numeric <- data %>%
-      dplyr::select(where(is.numeric)) %>%
+      dplyr::select(tidyselect::vars_select_helpers$where(is.numeric)) %>%
       dplyr::select(dplyr::any_of(features))
 
     categorical <- data %>%
-      dplyr::select(!where(is.numeric)) %>%
+      dplyr::select(!tidyselect::vars_select_helpers$where(is.numeric)) %>%
       dplyr::select(dplyr::any_of(features))
 
     # Check if no numeric or categorical features to worry about.
@@ -42,9 +42,9 @@ histograms <-
     } else {
       numeric_plot <- numeric %>%
         tidyr::pivot_longer(dplyr::everything()) %>%
-        ggplot2::ggplot(ggplot2::aes(x = value)) +
-        ggplot2::geom_histogram(fill='darkblue') +
-        ggplot2::facet_wrap( ~ name, ncol=num_cols, scales='free') +
+        ggplot2::ggplot(ggplot2::aes(x = .data$value)) +
+        ggplot2::geom_histogram(fill = 'darkblue') +
+        ggplot2::facet_wrap(~ name, ncol = num_cols, scales = 'free') +
         ggplot2::labs(title = "Histograms of Feature Values for Numerical Features")
       numeric_height <- 1
     }
@@ -55,9 +55,9 @@ histograms <-
     } else {
       categorical_plot <- categorical %>%
         tidyr::pivot_longer(dplyr::everything()) %>%
-        ggplot2::ggplot(ggplot2::aes(x = value)) +
-        ggplot2::geom_bar(fill='darkblue') +
-        ggplot2::facet_wrap( ~ name, ncol=num_cols,scales='free') +
+        ggplot2::ggplot(ggplot2::aes(x = .data$value)) +
+        ggplot2::geom_bar(fill = 'darkblue') +
+        ggplot2::facet_wrap(~ name, ncol = num_cols, scales = 'free') +
         ggplot2::labs(title = "Counts of Feature Values for Categorical Features")
       categorical_height <- 1
     }
@@ -70,11 +70,3 @@ histograms <-
     )
 
   }
-
-
-# test_plot <- mtcars_tib %>%
-#   # dplyr::mutate(cyl = as.factor(cyl)) %>%
-#   tidyr::pivot_longer(everything()) %>%
-#   ggplot2::ggplot(ggplot2::aes(x = value, fill = name)) +
-#   ggplot2::geom_histogram() +
-#   ggplot2::facet_wrap( ~ name, scales = 'free')
