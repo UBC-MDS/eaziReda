@@ -11,5 +11,13 @@
 #' @examples
 #' missing_detect(mtcars)
 missing_detect <- function(data){
-
+  
+  # check the if the input is a dataframe object
+  if (!is.data.frame(data)) {
+    stop("data must be a data.frame like object")
+  }
+  missing_count <- sapply(data, function(x) sum(is.na(x)))
+  missing_percent <- missing_count / nrow(data)
+  missing_df <- tibble::tibble(column = names(missing_count), n_missing = missing_count, percent = missing_percent)
+  missing_df
 }
