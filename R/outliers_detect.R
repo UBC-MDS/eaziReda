@@ -51,7 +51,7 @@ outliers_detect_iforest <- function(s, threshold = 0.5) {
 }
 
 
-#' Detects outliers in a pandas series using inter-quantile ranges
+#' Detects outliers in a data.frame/tibble using inter-quantile ranges
 #'
 #' @param s numeric vector for which the outliers need to be found
 #' @param threshold iqr factor used for outliers
