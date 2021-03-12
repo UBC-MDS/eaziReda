@@ -9,7 +9,69 @@
 #' @examples
 #' outliers_detect(c(1,2,1,2,100))
 outliers_detect <- function(s, method='zscore') {
+  outliers <- NA
 
+  if (method == "zscore") {
+    outliers <- outliers_detect_zscore(s)
+  } else if (method == "iqr") {
+    outliers <- outliers_detect_iqr(s)
+  } else if (method == "iforest") {
+    outliers <- outliers_detect_iforest(s)
+  }
+
+  outliers
+}
+
+
+#' Detects outliers in a pandas series using isolation forests
+#'
+#' @param s numeric vector for which the outliers need to be found
+#' @param threshold threshold for considering an outlier
+#'
+#' @return boolean vector with indices makerd true for the outliers
+#' @export
+#'
+#' @examples
+#' outliers_detect_iforest(c(1,1,1,1,1,1,1,1,1,1,1e14))
+outliers_detect_iforest <- function(s, threshold = 0.5) {
+  mdl <- isolation.forest(as.data.frame(s), output_score = T)
+
+  mdl$scores > threshold
+}
+
+
+#' Detects outliers in a pandas series using inter-quantile ranges
+#'
+#' @param s numeric vector for which the outliers need to be found
+#' @param threshold iqr factor used for outliers
+#'
+#' @return boolean vector with indices makerd true for the outliers
+#' @export
+#'
+#' @examples
+#' outliers_detect_iqr(c(1,1,1,1,1,1,1,1,1,1,1e14))
+outliers_detect_iqr <- function(s, threshold=1.5) {
+  q1 <- unname(quantile(x, 0.25))
+  q3 <- unname(quantile(x, 0.75))
+
+  iqr <- q3 - q1
+
+  (x < (q1 - threshold*iqr)) | (x > (q3 + threshold*iqr))
+}
+
+#' Detects outliers in a pandas series using zscores
+#'
+#' @param s numeric vector for which the outliers need to be found
+#' @param threshold zscore threshold used for outliers
+#'
+#' @return boolean vector with indices makerd true for the outliers
+#' @export
+#'
+#' @examples
+#' outliers_detect_zscore(c(1,1,1,1,1,1,1,1,1,1,1e14))
+outliers_detect_zscore <- function(s, threshold=3) {
+  z <- scale(s)[,1]
+  z > threshold
 }
 
 
@@ -24,5 +86,5 @@ outliers_detect <- function(s, method='zscore') {
 #' @examples
 #' remove_outliers(c(1,2,100), c(F,F,T))
 remove_outliers <- function(s, outliers) {
-
+  s[outliers]
 }
