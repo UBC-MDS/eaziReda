@@ -45,7 +45,7 @@ outliers_detect <- function(s, method='zscore') {
 #' @examples
 #' outliers_detect_iforest(c(1,1,1,1,1,1,1,1,1,1,1e14))
 outliers_detect_iforest <- function(s, threshold = 0.5) {
-  mdl <- isolation.forest(as.data.frame(s), output_score = T)
+  mdl <- isotree::isolation.forest(as.data.frame(s), output_score = T)
 
   mdl$scores > threshold
 }
