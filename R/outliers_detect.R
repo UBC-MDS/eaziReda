@@ -34,7 +34,7 @@ outliers_detect <- function(s, method='zscore') {
 }
 
 
-#' Detects outliers in a pandas series using isolation forests
+#' Detects outliers in a data.frame/tibble using isolation forests
 #'
 #' @param s numeric vector for which the outliers need to be found
 #' @param threshold threshold for considering an outlier
