@@ -1,10 +1,5 @@
 context("Outliers Detect")
 
-test_that("Exceptions work", {
-  expect_error(histograms(as.list(mtcars), features = c('cyl')))
-  expect_error(histograms(mtcars, features = c("wrong_name")))
-  expect_error(histograms(mtcars, features = c("cyl"), num_cols = 2.5))
-})
 
 
 test_that("zscore outliers work with toy data", {
@@ -68,4 +63,3 @@ test_that("check errors in remove outliers", {
   expect_error(remove_outliers(c(1,2,3), c(1,2,3)))
   expect_error(remove_outliers(c(1,2,3), c(T,F)))
 })
-
