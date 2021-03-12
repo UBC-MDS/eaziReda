@@ -21,7 +21,7 @@ missing_impute <- function(data, method_num = "mean", method_non_num = "most_fre
   }
   
   # check the if the input method_non_num is one of the option
-  if (!is.element(method_num, c('drop', 'most_frequent'))) {
+  if (!is.element(method_non_num, c('drop', 'most_frequent'))) {
     stop("Please enter one the following option: 'drop', 'most_frequent'")
   }
   
