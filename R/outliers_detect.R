@@ -70,7 +70,7 @@ outliers_detect_iqr <- function(s, threshold=1.5) {
   (s < (q1 - threshold*iqr)) | (s > (q3 + threshold*iqr))
 }
 
-#' Detects outliers in a pandas series using zscores
+#' Detects outliers in a data.frame/tibble using zscores
 #'
 #' @param s numeric vector for which the outliers need to be found
 #' @param threshold zscore threshold used for outliers
