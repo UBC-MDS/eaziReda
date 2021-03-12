@@ -39,7 +39,8 @@ Imports:
     tidyselect,
     rlang,
     vdiffr (>= 0.3.3),
-    tibble
+    tibble,
+    isotree
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
