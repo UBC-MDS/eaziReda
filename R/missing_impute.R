@@ -60,7 +60,7 @@ missing_impute <- function(data, method_num = "mean", method_non_num = "most_fre
     data_imp <- tidyr::drop_na(data_imp, tidyselect::all_of(non_num_columns))
   } else {
     for(col in non_num_columns) {
-    most_freq <- tail(names(sort(table(daf[[col]]))), 1)
+    most_freq <- tail(names(sort(table(data_imp[[col]]))), 1)
     data_imp[col]  <-  lapply(data_imp[col], function(x) { 
       x[is.na(x)] <- most_freq
       x})
