@@ -2,25 +2,23 @@
 % Please edit documentation in R/histograms.R
 \name{histograms}
 \alias{histograms}
-\title{Plot exploratory visual of histograms/boxplot by feature}
+\title{Plot exploratory visual of histograms/bar chart by feature}
 \usage{
-histograms(data, features, plot_width = 600, plot_height = 400)
+histograms(data, features, num_cols = 2)
 }
 \arguments{
-\item{data}{Data to plot}
+\item{data}{data.frame like object to plot histograms/bar charts}
 
 \item{features}{Which features from \code{data} to plot as a character vector}
 
-\item{plot_width}{Width of the plot produced in pixels}
-
-\item{plot_height}{Height of the plot produced in pixels}
+\item{num_cols}{Number of columns in facetted chart produced}
 }
 \value{
 ggplot2 object
 }
 \description{
-Will plot histograms for numerical features, box plots for categorical.
+Will plot histograms for numerical features, bar charts for categorical.
 }
 \examples{
-histograms(mtcars, features=c("mpg","cyl"), plot_width=600, plot_height=400)
+histograms(mtcars, features=c("mpg","cyl"))
 }
