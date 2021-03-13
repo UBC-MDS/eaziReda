@@ -43,7 +43,7 @@ histograms <-
       numeric_plot <- numeric %>%
         tidyr::pivot_longer(dplyr::everything()) %>%
         ggplot2::ggplot(ggplot2::aes(x = .data$value)) +
-        ggplot2::geom_histogram(fill = 'darkblue') +
+        ggplot2::geom_histogram(fill = 'darkblue', bins=30) +
         ggplot2::facet_wrap(~ name, ncol = num_cols, scales = 'free') +
         ggplot2::labs(title = "Histograms of Feature Values for Numerical Features")
       numeric_height <- 1
