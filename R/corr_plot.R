@@ -81,7 +81,7 @@ corr_plot <- function(data, features = NULL, method='pearson', plot_width=11, pl
   
   # Correlation plot
   corr_plot <- (ggplot2::ggplot(data = corr_df,
-                                ggplot2::aes(x = x, y = y, fill = corr_value)) +
+                                ggplot2::aes(x = .data$x, y = .data$y, fill = .data$corr_value)) +
                   ggplot2::geom_tile(alpha=0.5) +
                   ggplot2::labs(x = "Numerical Features",
                                 y = "Numerical Features",
