@@ -1,5 +1,3 @@
-context("Correlation Plot")
-
 # Creating test inputs for the test function
 data_test1 <- data.frame('Title' =
                            (c("Finding Nemo", "Dunkirk", "Denial")),
@@ -42,7 +40,7 @@ test_that("The input 'data' must have at least two numeric features", {
   expect_error(corr_plot(data_test3, features_test5))
 })
 
-# Tests whether all columns in features exist in the data   
+# Tests whether all columns in features exist in the data
 test_that("The given column names must be in the input 'data'", {
   expect_error(corr_plot(data_test1, c('vote')))
 })
@@ -52,17 +50,17 @@ test_that("The input 'method' must be a character", {
   expect_error(corr_plot(data_test1, features_test1, method = c(5)))
 })
 
-# Tests whether input method is one of the 3 available options 
+# Tests whether input method is one of the 3 available options
 test_that("The input 'method' must be either 'pearson', 'spearman' or 'kendall'", {
   expect_error(corr_plot(data_test1, features_test1,'laplace'))
 })
 
-# Tests whether input plot_width is a number 
+# Tests whether input plot_width is a number
 test_that("The input 'plot_width' must be a number", {
   expect_error(corr_plot(data_test1, features_test1, plot_width = "width"))
 })
 
-# Tests whether input plot_height is a number 
+# Tests whether input plot_height is a number
 test_that("The input 'plot_height' must be a number", {
   expect_error(corr_plot(data_test1, features_test1, plot_height = "height"))
 })
@@ -71,7 +69,7 @@ test_that("The input 'plot_height' must be a number", {
 
 # Tests whether output plot is a ggplot object
 test_that("The output plot must be of 'ggplot' type",{
-  expect_true(is.ggplot(plot_test))
+  expect_true(ggplot2::is.ggplot(plot_test))
 })
 
 # Tests whether output plot is geom_tile
@@ -83,7 +81,7 @@ test_that("The output plot must have 'geom_tile' mark", {
 test_that("The output plot correlation values must be in the range (-1, 1)", {
   expect_equal(corr_plot(data_test1)$scales$scales[[1]]$limits[1], -1)
   expect_equal(corr_plot(data_test1)$scales$scales[[1]]$limits[2], 1)
-  
+
 })
 
-                     
+

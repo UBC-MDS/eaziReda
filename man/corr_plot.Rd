@@ -8,20 +8,20 @@ corr_plot(
   data,
   features = NULL,
   method = "pearson",
-  plot_width = 500,
-  plot_height = 400
+  plot_width = 11,
+  plot_height = 8
 )
 }
 \arguments{
 \item{data}{The input data frame for plotting.}
 
-\item{features}{A vector of strings that represents the features names. By default, NULL (returns plot of all numeric features).}
+\item{features}{A vector of characters that represents the features names. By default, NULL (returns plot of all numeric features).}
 
 \item{method}{The correlation method that includes: 'pearson', 'spearman' or 'kendall'. By default 'pearson'.}
 
-\item{plot_width}{The width of the output plot. By default 500.}
+\item{plot_width}{The width of the output plot. By default 11.}
 
-\item{plot_height}{The height of the output plot. By default 400.}
+\item{plot_height}{The height of the output plot. By default 8.}
 }
 \value{
 ggplot object, a correlation plot that illustrates the correlation between numeric features interactively.
