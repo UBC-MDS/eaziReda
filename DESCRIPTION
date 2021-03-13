@@ -40,7 +40,9 @@ Imports:
     rlang,
     vdiffr (>= 0.3.3),
     tibble,
-    isotree
+    isotree,
+    data.table,
+    purrr
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
