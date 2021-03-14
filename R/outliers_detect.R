@@ -95,7 +95,7 @@ outliers_detect_zscore <- function(s, threshold=3) {
 #' @export
 #'
 #' @examples
-#' remove_outliers(c(1,2,100), c(F,F,T))
+#' remove_outliers(c(1,2,100), c(FALSE,FALSE,TRUE))
 remove_outliers <- function(s, outliers) {
 
   if(!is.logical(outliers)) {
