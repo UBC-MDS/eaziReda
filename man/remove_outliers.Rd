@@ -18,5 +18,5 @@ vector with outliers deleted
 Remove outliers
 }
 \examples{
-remove_outliers(c(1,2,100), c(F,F,T))
+remove_outliers(c(1,2,100), c(FALSE,FALSE,TRUE))
 }
