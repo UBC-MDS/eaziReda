@@ -13,7 +13,7 @@ test_that('missing_detect should return a tibble', {
 
 test_that("missing_detect work with toy data", {
   
-  expect_equal(missing_detect(test_df), expect_output,ignore_attr = TRUE)
+  expect_equal(missing_detect(test_df), expect_output, ignore_attr = TRUE)
 })
 
 test_that("missing_detect should throw an error if the input is not a dataframe", {
