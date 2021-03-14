@@ -20,7 +20,7 @@ features_test4 <- 'vote_average'
 
 features_test5 <- c('vote_averag')
 
-plot_test <- corr_plot(data_test1, features = NULL, method='pearson', plot_width=11, plot_height=8)
+plot_test <- corr_plot(data_test1, features = NULL, method='pearson')
 
 
 # Testing the inputs
@@ -55,15 +55,6 @@ test_that("The input 'method' must be either 'pearson', 'spearman' or 'kendall'"
   expect_error(corr_plot(data_test1, features_test1,'laplace'))
 })
 
-# Tests whether input plot_width is a number
-test_that("The input 'plot_width' must be a number", {
-  expect_error(corr_plot(data_test1, features_test1, plot_width = "width"))
-})
-
-# Tests whether input plot_height is a number
-test_that("The input 'plot_height' must be a number", {
-  expect_error(corr_plot(data_test1, features_test1, plot_height = "height"))
-})
 
 # Testing the outputs
 
@@ -83,5 +74,3 @@ test_that("The output plot correlation values must be in the range (-1, 1)", {
   expect_equal(corr_plot(data_test1)$scales$scales[[1]]$limits[2], 1)
 
 })
-
-
