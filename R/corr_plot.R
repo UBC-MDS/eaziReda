@@ -1,13 +1,8 @@
-
-
-
 #' A function that generates a correlation plot for a list of features in a given data frame.
 #'
 #' @param data The input data frame for plotting.
 #' @param features A vector of characters that represents the features names. By default, NULL (returns plot of all numeric features).
 #' @param method The correlation method that includes: 'pearson', 'spearman' or 'kendall'. By default 'pearson'.
-#' @param plot_width The width of the output plot. By default 11.
-#' @param plot_height The height of the output plot. By default 8.
 #'
 #' @return ggplot object, a correlation plot that illustrates the correlation between numeric features interactively.
 #' @export
@@ -25,7 +20,7 @@
 #'
 #' corr_plot(data, features = numerical_features, method = 'spearman')
 #'
-corr_plot <- function(data, features = NULL, method='pearson', plot_width=11, plot_height=8){
+corr_plot <- function(data, features = NULL, method='pearson'){
 
   # Tests whether input data is of data.frame type
   if (!is.data.frame(data)) {
@@ -59,16 +54,6 @@ corr_plot <- function(data, features = NULL, method='pearson', plot_width=11, pl
     stop("Please pick a correlation method: 'pearson', 'spearman' or 'kendall'")
   }
 
-  # Tests whether input plot width is numeric
-  if(!is.numeric(plot_width) | length(plot_width) != 1){
-    stop("Plot_width must be a number'")
-  }
-
-  # Tests whether input plot height is numeric
-  if(!is.numeric(plot_height) | length(plot_height) != 1){
-    stop("Plot_height must be a number'")
-  }
-
   #Subsetting the dataframe
   numeric_df <- dplyr::select_if(data, is.numeric)
   if (length(features) > 0) {
@@ -81,8 +66,7 @@ corr_plot <- function(data, features = NULL, method='pearson', plot_width=11, pl
     dplyr::mutate("x" = (corr_df %>% rownames())) %>%
     tidyr::pivot_longer(names_to = "y", values_to = "corr_value", cols = tidyselect::vars_select_helpers$where(is.numeric))
 
-  options(repr.plot.height = plot_height, repr.plot.width = plot_width)
-
+  
   # Correlation plot
   corr_plot <- (ggplot2::ggplot(data = corr_df,
                                 ggplot2::aes(x = .data$x, y = .data$y, fill = .data$corr_value)) +
