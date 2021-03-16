@@ -44,7 +44,10 @@ Imports:
     data.table,
     purrr
 Suggests: 
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
+    covr
 Config/testthat/edition: 3
 Remotes: 
     r-lib/vdiffr
+URL: https://github.com/UBC-MDS/eaziReda
+BugReports: https://github.com/UBC-MDS/eaziReda/issues

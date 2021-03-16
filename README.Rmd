@@ -16,6 +16,7 @@ knitr::opts_chunk$set(
 # eaziReda
 
 <!-- badges: start -->
+[![R-CMD-check](https://github.com/UBC-MDS/eaziReda/workflows/R-CMD-check/badge.svg)](https://github.com/UBC-MDS/eaziReda/actions)[![codecov](https://codecov.io/gh/UBC-MDS/eaziReda/branch/master/graph/badge.svg)](https://codecov.io/gh/UBC-MDS/eaziReda)
 <!-- badges: end -->
 
 Almost every data analysis project involves the process of doing some exploratory data analysis(EDA) and data preprocessing. Usually they serve as a very crucial and inevitable step in a data analysis workflow. There are some very common tasks in EDA, which can include:
