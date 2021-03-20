@@ -45,9 +45,12 @@ Imports:
     purrr
 Suggests: 
     testthat (>= 3.0.0),
-    covr
+    covr,
+    knitr,
+    rmarkdown
 Config/testthat/edition: 3
 Remotes: 
     r-lib/vdiffr
 URL: https://ubc-mds.github.io/eaziReda, https://github.com/UBC-MDS/eaziReda
 BugReports: https://github.com/UBC-MDS/eaziReda/issues
+VignetteBuilder: knitr
