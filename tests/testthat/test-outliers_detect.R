@@ -38,7 +38,7 @@ test_that("iforest outlier work with toy data", {
 test_that("remove outliers works with toy data", {
 
   x <- remove_outliers(simple_series, c(F,F,F,F,T))
-  expect_equal(c(1000), x)
+  expect_equal(c(1,2,1,2), x)
 })
 
 

@@ -15,6 +15,14 @@ Almost every data analysis project involves the process of doing some explorator
   To solve this issue, we designed this R package eaziReda that wraps all of those lines of code into four convenient 
   functions that will allow you to quickly and easily carry out EDA along with some simple preprocessing using just four lines of code!
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/UBC-MDS/eaziReda}
+  \item Report bugs at \url{https://github.com/UBC-MDS/eaziReda/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Dustin Andrews \email{dandrew9@student.ubc.ca}
 
