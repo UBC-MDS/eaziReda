@@ -96,7 +96,7 @@ head(mtcars_new, 10)
 
 `missing_detect()` can be used to detect the missing values of a given
 dataset. There is only one argument for this function, which can be
-either base-R dataframe or tibble. The output is a table that listing
+either base-R dataframe or tibble. The output is a table that lists
 the number of missing values (`n_missing`) and the percentage of missing
 values for each column (`percent`).
 
@@ -201,7 +201,7 @@ corr_plot(mtcars_new, features=c("mpg", "disp","hp"), method = 'pearson')
 
 -   This package is implemented with the functions to do both EDA and
     data preprocessing. After EDA, the user might not need to explore
-    other packages to do such proprocessing tasks.
+    other packages to do such preprocessing tasks.
 -   The plotting functions can take the argument as list of features. So
     the user does not need to run the same plotting function over and over
     again. The plots are well-organized already.
