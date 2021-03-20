@@ -3,7 +3,7 @@
 #' @param s vector that contains the data to detect outliers in
 #' @param method method to detect outliers. One of 'zscore', 'iqr', 'iforest'
 #'
-#' @return boolean vecotr with indices makerd true for the outliers
+#' @return boolean vector with indices marked true for the outliers
 #' @export
 #'
 #' @examples
@@ -106,5 +106,5 @@ remove_outliers <- function(s, outliers) {
     stop("outliers and s should have the same length")
   }
 
-  s[outliers]
+  s[!outliers]
 }
