@@ -200,9 +200,9 @@ corr_plot(mtcars_new, features=c("mpg", "disp","hp"), method = 'pearson')
 # Key Advantages
 
 -   This package is implemented with the functions to do both EDA and
-    data proprocessing.After EDA, the user might not need to explore
+    data preprocessing. After EDA, the user might not need to explore
     other packages to do such proprocessing tasks.
 -   The plotting functions can take the argument as list of features. So
-    the user do not need to run the same plotting function over and over
+    the user does not need to run the same plotting function over and over
     again. The plots are well-organized already.
 -   Lots of flexibility and customization available.
