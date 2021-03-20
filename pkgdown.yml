@@ -3,7 +3,7 @@ pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
   eaziReda-vignette: eaziReda-vignette.html
-last_built: 2021-03-20T00:34Z
+last_built: 2021-03-20T00:37Z
 urls:
   reference: https://ubc-mds.github.io/eaziReda/reference
   article: https://ubc-mds.github.io/eaziReda/articles
