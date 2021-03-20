@@ -1,3 +1,5 @@
+context("corr_plot")
+
 # Creating test inputs for the test function
 data_test1 <- data.frame('Title' =
                            (c("Finding Nemo", "Dunkirk", "Denial")),
@@ -72,5 +74,13 @@ test_that("The output plot must have 'geom_tile' mark", {
 test_that("The output plot correlation values must be in the range (-1, 1)", {
   expect_equal(corr_plot(data_test1)$scales$scales[[1]]$limits[1], -1)
   expect_equal(corr_plot(data_test1)$scales$scales[[1]]$limits[2], 1)
+
+})
+
+# Visual Regression Tests
+test_that("Graphs match previous version",{
+  p1 <- corr_plot(data_test1, features_test1)
+
+  vdiffr::expect_doppelganger("Basic plot", p1)
 
 })

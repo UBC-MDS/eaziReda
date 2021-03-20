@@ -31,4 +31,12 @@ test_that("Plots with mtcars match previous versions", {
     )
   vdiffr::expect_doppelganger("Single numeric two categorical", p4)
 
+  p5 <-
+    histograms(
+      mtcars %>% dplyr::mutate(cyl = as.factor(cyl), gear = as.factor(gear)) ,
+      features = c("cyl","gear")
+    )
+  vdiffr::expect_doppelganger("Two categorical", p4)
+
 })
+
