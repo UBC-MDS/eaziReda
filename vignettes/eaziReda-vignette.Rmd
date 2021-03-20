@@ -201,7 +201,7 @@ corr_plot(mtcars_new, features=c("mpg", "disp","hp"), method = 'pearson')
 
 -   This package is implemented with the functions to do both EDA and
     data preprocessing. After EDA, the user might not need to explore
-    other packages to do such proprocessing tasks.
+    other packages to do such preprocessing tasks.
 -   The plotting functions can take the argument as list of features. So
     the user does not need to run the same plotting function over and over
     again. The plots are well-organized already.
