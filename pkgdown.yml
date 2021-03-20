@@ -2,8 +2,8 @@ pandoc: 2.7.3
 pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
-  package_name-vignette: package_name-vignette.html
-last_built: 2021-03-20T00:11Z
+  eaziReda-vignette: eaziReda-vignette.html
+last_built: 2021-03-20T00:20Z
 urls:
   reference: https://ubc-mds.github.io/eaziReda/reference
   article: https://ubc-mds.github.io/eaziReda/articles
