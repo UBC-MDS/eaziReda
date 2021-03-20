@@ -153,7 +153,7 @@
 <h1 class="hasAnchor">
 <a href="#identifying-missing-values-with-missing_detect" class="anchor"></a>Identifying Missing Values with <code>missing_detect()</code>
 </h1>
-<p><code><a href="../reference/missing_detect.html">missing_detect()</a></code> can be used to detect the missing values of a given dataset. There is only one argument for this function, which can be either base-R dataframe or tibble. The output is a table that listing the number of missing values (<code>n_missing</code>) and the percentage of missing values for each column (<code>percent</code>).</p>
+<p><code><a href="../reference/missing_detect.html">missing_detect()</a></code> can be used to detect the missing values of a given dataset. There is only one argument for this function, which can be either base-R dataframe or tibble. The output is a table that lists the number of missing values (<code>n_missing</code>) and the percentage of missing values for each column (<code>percent</code>).</p>
 <p>For example, we can assess the missing values in the <code>mtcars_new</code>.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R">
@@ -177,7 +177,7 @@
 <h1 class="hasAnchor">
 <a href="#imputing-missing-values-with-missing_impute" class="anchor"></a>Imputing Missing Values with <code>missing_impute()</code>
 </h1>
-<p><code><a href="../reference/missing_detect.html">missing_detect()</a></code> can be used to impute the missing values all together for a given dataset. The first argument is the dataset, which can be either base-R dataframe or tibble. The second argument is the method used for imputing numerical missing values (one of “mean”, “median”, “drop”). The third argument is the method used for imputing non-numerical missing values (one of “most_frequent”, “drop”). The output is a imputed version of the input dataset.</p>
+<p><code><a href="../reference/missing_detect.html">missing_detect()</a></code> can be used to impute the missing values all together for a given dataset. The first argument is the dataset, which can be either base-R dataframe or tibble. The second argument is the method used for imputing numerical missing values (one of “mean”, “median”, “drop”). The third argument is the method used for imputing non-numerical missing values (one of “most_frequent”, “drop”). The output is an imputed version of the input dataset.</p>
 <p>For example, we can impute the <code>mtcars_new</code> by filling the NAs by column mean if NA appears in numerical column, and filling the NAs by most frequent values otherwise. The table below shows the first 10 rows of the imputed <code>mtcars_new</code>.</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">mtcars_new_imputed</span> <span class="op">&lt;-</span> <span class="fu"><a href="../reference/missing_impute.html">missing_impute</a></span><span class="op">(</span><span class="va">mtcars_new</span>, method_num <span class="op">=</span> <span class="st">"mean"</span>, method_non_num <span class="op">=</span> <span class="st">"most_frequent"</span><span class="op">)</span>
@@ -198,7 +198,7 @@
 <h1 class="hasAnchor">
 <a href="#detecting-the-outliers-with-outliers_detect" class="anchor"></a>Detecting the Outliers with <code>outliers_detect()</code>
 </h1>
-<p><code>outlier_detect()</code> can be used to detect the outliers for a given vector/column. The first argument is the vector that the user would like to detect outliers for. The second argument is method to detect outliers.(one of “zscore”, “iqr”, “iforest”). The output is a boolean vector with indices marked TRUE for the outliers.</p>
+<p><code>outlier_detect()</code> can be used to detect the outliers for a given vector/column. The first argument is the vector that the user would like to detect outliers for. The second argument is the method to detect outliers.(one of “zscore”, “iqr”, “iforest”). The output is a boolean vector with indices marked TRUE for the outliers.</p>
 <p>For example, we can assess the outliers for the column <code>hp</code> based on the rule of interquartile range (IQR).</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/outliers_detect.html">outliers_detect</a></span><span class="op">(</span><span class="va">mtcars_new</span><span class="op">$</span><span class="va">hp</span>, method <span class="op">=</span> <span class="st">"iqr"</span><span class="op">)</span>
@@ -232,7 +232,7 @@
 <h1 class="hasAnchor">
 <a href="#plotting-correlations-with-corr_plot" class="anchor"></a>Plotting Correlations with <code>corr_plot()</code>
 </h1>
-<p><code><a href="../reference/corr_plot.html">corr_plot()</a></code> can be used to create a pairwise correlation plot given a list of numerical features (columns). The first argument is the dataset, which can be either base-R dataframe or tibble. The second argument is a character vector that contains all the names of the numerical columns that the user would like to plot for. The third argument is the method to calculate the correlation (one of “pearson”, “spearman” or “kendall”). The output is a correlation matrix (heatmap) showing the correlation between the specified columns.</p>
+<p><code><a href="../reference/corr_plot.html">corr_plot()</a></code> can be used to create a pairwise correlation plot given a list of numerical features (columns). The first argument is the dataset, which can be either base-R dataframe or tibble. The second argument is a character vector that contains all the names of the numerical columns that the user would like to plot for. The third argument is the method to calculate the correlation (one of “pearson”, “spearman” or “kendall”). The output is a correlation heatmap showing the correlation between the specified columns.</p>
 <p>For example, we can explore the pearson correlation coefficients between the columns: <code>mpg</code>, <code>disp</code>, and <code>hp</code>.</p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="fu"><a href="../reference/corr_plot.html">corr_plot</a></span><span class="op">(</span><span class="va">mtcars_new</span>, features<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"mpg"</span>, <span class="st">"disp"</span>,<span class="st">"hp"</span><span class="op">)</span>, method <span class="op">=</span> <span class="st">'pearson'</span><span class="op">)</span></code></pre></div>
@@ -242,7 +242,7 @@
 <h1 class="hasAnchor">
 <a href="#key-advantages" class="anchor"></a>Key Advantages</h1>
 <ul>
-<li>This package is implemented with the functions to do both EDA and data preprocessing. After EDA, the user might not need to explore other packages to do such proprocessing tasks.</li>
+<li>This package is implemented with the functions to do both EDA and data preprocessing. After EDA, the user might not need to explore other packages to do such preprocessing tasks.</li>
 <li>The plotting functions can take the argument as list of features. So the user does not need to run the same plotting function over and over again. The plots are well-organized already.</li>
 <li>Lots of flexibility and customization available.</li>
 </ul>
