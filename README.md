@@ -34,6 +34,10 @@ You can install the development version from
     # install.packages("devtools")
     devtools::install_github("https://github.com/UBC-MDS/eaziReda.git")
 
+## Documentation
+
+Documentation for `eaziReda` can be found [here](ubc-mds.github.io/eazireda).
+
 ## Features
 
 1.  `missing_impute`: This function will take in a dataframe and
