@@ -37,6 +37,10 @@ You can install the development version from [GitHub](https://github.com/) with:
 devtools::install_github("https://github.com/UBC-MDS/eaziReda.git")
 ```
 
+## Documentation & Usage
+
+Documentation and usage examples for `eaziReda` can be found [here](https://ubc-mds.github.io/eaziReda/).
+
 ## Features
 
 1.  `missing_impute`: This function will take in a dataframe and generate a table listing the number of missing values and the percentage of missing values for each column. It also gives the user an option of doing some simple imputations on the entire dataframe in place. The imputation methods can also be customized by the user.

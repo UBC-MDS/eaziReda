@@ -13,10 +13,10 @@ exploratory data analysis(EDA) and data preprocessing. Usually they
 serve as a very crucial and inevitable step in a data analysis workflow.
 There are some very common tasks in EDA, which can include:
 
-  - checking missing values
-  - detecting outliers
-  - ploting correlation plots between features
-  - ploting histograms/bar plots for each individual features
+-   checking missing values
+-   detecting outliers
+-   ploting correlation plots between features
+-   ploting histograms/bar plots for each individual features
 
 Typically these steps are followed by some preprocesing like imputation
 and dealing with outliers. All of those steps together may require lots
@@ -24,17 +24,20 @@ of coding effort and can be repeated for several projects. To solve this
 issue, we designed the R package `eaziReda` that wraps all of those
 lines of code into four convenient functions that will allow you to
 quickly and easily carry out EDA along with some simple preprocessing
-using just four lines of code\!
+using just four lines of code!
 
 ## Installation
 
 You can install the development version from
 [GitHub](https://github.com/) with:
 
-``` r
-# install.packages("devtools")
-devtools::install_github("https://github.com/UBC-MDS/eaziReda.git")
-```
+    # install.packages("devtools")
+    devtools::install_github("https://github.com/UBC-MDS/eaziReda.git")
+
+## Documentation & Usage
+
+Documentation and usage examples for `eaziReda` can be found
+[here](https://ubc-mds.github.io/eaziReda/).
 
 ## Features
 
@@ -63,18 +66,18 @@ While there aren’t a ton of packages in R that do *only* EDA, quite a
 few of them include it as a secondary functionality. Here are a few
 packages that we found that do something similar:
 
-  - [SmartEDA](https://cran.r-project.org/web/packages/SmartEDA/vignettes/SmartEDA.html)
-      - SmartEDA includes multiple custom functions to perform initial
+-   [SmartEDA](https://cran.r-project.org/web/packages/SmartEDA/vignettes/SmartEDA.html)
+    -   SmartEDA includes multiple custom functions to perform initial
         exploratory analysis on any input data describing the structure
         and the relationships present in the data.
-  - [dlookr](https://cran.r-project.org/web/packages/dlookr/index.html)
-      - A collection of tools that support data diagnosis, exploration,
+-   [dlookr](https://cran.r-project.org/web/packages/dlookr/index.html)
+    -   A collection of tools that support data diagnosis, exploration,
         and transformation. Data diagnostics provides information and
         visualization of missing values and outliers and unique and
         negative values to help you understand the distribution and
         quality of your data.
-  - [DataExplorer](https://www.rdocumentation.org/packages/DataExplorer/versions/0.8.1)
-      - Automated data exploration process for analytic tasks and
+-   [DataExplorer](https://www.rdocumentation.org/packages/DataExplorer/versions/0.8.1)
+    -   Automated data exploration process for analytic tasks and
         predictive modeling, so that users could focus on understanding
         data and extracting insights.
 
@@ -90,7 +93,7 @@ By contributing to this project, you agree to abide by its terms.
 We welcome and recognize all contributions.
 
 | Core contributor          | Github.com username |
-| ------------------------- | ------------------- |
+|---------------------------|---------------------|
 | Vignesh Lakshmi Rajakumar | @vigneshrajakumar   |
 | Dustin Andrews            | @dbandrews          |
 | Arash Shamseddini         | @arashshams         |
