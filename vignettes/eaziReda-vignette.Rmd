@@ -1,8 +1,8 @@
 ---
-title: "package_name-vignette"
+title: "eaziReda-vignette"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{package_name-vignette}
+  %\VignetteIndexEntry{eaziReda-vignette}
   %\VignetteEncoding{UTF-8}
   %\VignetteEngine{knitr::rmarkdown}
 editor_options: 
