@@ -96,7 +96,7 @@ head(mtcars_new, 10)
 
 `missing_detect()` can be used to detect the missing values of a given
 dataset. There is only one argument for this function, which can be
-either base-R dataframe or tibble. The output is a table that listing
+either base-R dataframe or tibble. The output is a table that lists
 the number of missing values (`n_missing`) and the percentage of missing
 values for each column (`percent`).
 
@@ -115,7 +115,7 @@ either base-R dataframe or tibble. The second argument is the method
 used for imputing numerical missing values (one of "mean", "median",
 "drop"). The third argument is the method used for imputing
 non-numerical missing values (one of "most\_frequent", "drop"). The
-output is a imputed version of the input dataset.
+output is an imputed version of the input dataset.
 
 For example, we can impute the `mtcars_new` by filling the NAs by column
 mean if NA appears in numerical column, and filling the NAs by most
@@ -131,7 +131,7 @@ head(mtcars_new_imputed, 10)
 
 `outlier_detect()` can be used to detect the outliers for a given
 vector/column. The first argument is the vector that the user would like
-to detect outliers for. The second argument is method to detect
+to detect outliers for. The second argument is the method to detect
 outliers.(one of "zscore", "iqr", "iforest"). The output is a boolean
 vector with indices marked TRUE for the outliers.
 
@@ -187,7 +187,7 @@ which can be either base-R dataframe or tibble. The second argument is a
 character vector that contains all the names of the numerical columns
 that the user would like to plot for. The third argument is the method
 to calculate the correlation (one of "pearson", "spearman" or
-"kendall"). The output is a correlation matrix (heatmap) showing the
+"kendall"). The output is a correlation heatmap showing the
 correlation between the specified columns.
 
 For example, we can explore the pearson correlation coefficients between
@@ -201,7 +201,7 @@ corr_plot(mtcars_new, features=c("mpg", "disp","hp"), method = 'pearson')
 
 -   This package is implemented with the functions to do both EDA and
     data preprocessing. After EDA, the user might not need to explore
-    other packages to do such proprocessing tasks.
+    other packages to do such preprocessing tasks.
 -   The plotting functions can take the argument as list of features. So
     the user does not need to run the same plotting function over and over
     again. The plots are well-organized already.
