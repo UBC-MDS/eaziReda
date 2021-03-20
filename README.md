@@ -34,9 +34,10 @@ You can install the development version from
     # install.packages("devtools")
     devtools::install_github("https://github.com/UBC-MDS/eaziReda.git")
 
-## Documentation
+## Documentation & Usage
 
-Documentation for `eaziReda` can be found [here](ubc-mds.github.io/eazireda).
+Documentation and usage examples for `eaziReda` can be found
+[here](https://ubc-mds.github.io/eaziReda/).
 
 ## Features
 
